@@ -10,7 +10,7 @@ services:
         value: production
       - key: APP_NAME
         value: AI ScamShield
-      # You can tighten this later to your real frontend domain(s)
+      # Tighten later if you change domains
       - key: CORS_ORIGINS
         value: https://scamshield-frontend.onrender.com
       - key: DATABASE_URL
@@ -26,6 +26,8 @@ services:
         value: ml/artifacts/text_model.joblib
       - key: URL_MODEL_PATH
         value: ml/artifacts/url_model.joblib
+      - key: RDAP_TIMEOUT_SECONDS
+        value: "2.5"
 
   - type: web
     name: scamshield-frontend
@@ -33,8 +35,8 @@ services:
     rootDir: frontend
     buildCommand: npm install && npm run build
     staticPublishPath: dist
-    # Reverse proxy API to backend without needing CORS in the browser
     routes:
+      # Reverse proxy API to backend (keeps browser same-origin)
       - type: rewrite
         source: /api/*
         destination: https://scamshield-backend.onrender.com/api/*
@@ -45,7 +47,7 @@ services:
   - type: keyvalue
     name: scamshield-redis
     plan: free
-
+    ipAllowList: []   # required by Render; empty = no public access
 
 databases:
   - name: scamshield-db
