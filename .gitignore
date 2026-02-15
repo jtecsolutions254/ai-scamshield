@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+.venv*/
+
+# Env files
+backend/.env
+frontend/.env
+
+# Node
+frontend/node_modules/
+frontend/dist/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Docker volumes (if you bind-mount locally)
+pgdata/
+# Local DB files
+backend/*.db
+backend/*.sqlite
+
+# Vite cache
+frontend/.vite/

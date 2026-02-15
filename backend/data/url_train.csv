@@ -1,0 +1,11 @@
+url,label
+"http://example-login-secure.com/verify",1
+"http://bit.ly/abc",1
+"https://accounts.google.com",0
+"https://mpesa.safaricom.co.ke",0
+"http://secure-mpesa-verify.top/login",1
+"http://192.168.0.10/login",1
+"https://www.microsoft.com",0
+"http://login.google.com.evil.com/auth",1
+"http://paypal.com.verify-user.security-update.xyz",1
+"https://www.co-operativebank.co.ke",0

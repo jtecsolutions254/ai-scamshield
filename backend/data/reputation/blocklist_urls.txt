@@ -1,0 +1,2 @@
+# Add known-bad URLs here, one per line.
+http://example-login-secure.com/verify

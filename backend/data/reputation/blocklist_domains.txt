@@ -1,0 +1,3 @@
+# Add known-bad domains here (lowercase), one per line.
+example-login-secure.com
+secure-mpesa-verify.top
