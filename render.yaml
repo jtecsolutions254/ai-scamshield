@@ -12,7 +12,7 @@ services:
         value: AI ScamShield
       # Tighten later if you change domains
       - key: CORS_ORIGINS
-        value: https://scamshield-frontend.onrender.com
+        value: https://scamshield-frontend-3w4c.onrender.com
       - key: DATABASE_URL
         fromDatabase:
           name: scamshield-db
@@ -39,7 +39,7 @@ services:
       # Reverse proxy API to backend (keeps browser same-origin)
       - type: rewrite
         source: /api/*
-        destination: https://scamshield-backend.onrender.com/api/*
+        destination: https://scamshield-backend-yb1y.onrender.com
       - type: rewrite
         source: /*
         destination: /index.html

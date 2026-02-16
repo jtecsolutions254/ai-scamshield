@@ -32,7 +32,7 @@ export default function Shell({ children }: { children: React.ReactNode }) {
               <p className="text-sm text-slate-300/90">Phishing • Scam SMS • Malicious URL Detection</p>
             </div>
           </div>
-          <a className="btn-ghost" href="http://localhost:8000/docs" target="_blank" rel="noreferrer">
+          <a className="btn-ghost" href="/docs" target="_blank" rel="noreferrer">
             API Docs
           </a>
         </header>
