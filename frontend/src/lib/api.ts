@@ -1,6 +1,7 @@
 // Dev default: talk directly to local backend.
 // Production default: same-origin (pairs with reverse proxy / rewrite rules).
-export const API_BASE = (import.meta as any).env?.VITE_API_URL ?? (import.meta.env.PROD ? "" : "http://localhost:8000");
+export const API_BASE =
+  import.meta.env.VITE_API_URL || "";
 
 export async function postJSON<T>(path: string, body: any): Promise<T> {
   const res = await fetch(`${API_BASE}${path}`, {
