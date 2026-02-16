@@ -1,5 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { API_BASE } from "../lib/api";
+const docsHref = API_BASE ? `${API_BASE}/docs` : "/docs";
 
 const NavItem = ({ to, label, icon }: { to: string; label: string; icon: string }) => (
   <NavLink
@@ -32,9 +34,10 @@ export default function Shell({ children }: { children: React.ReactNode }) {
               <p className="text-sm text-slate-300/90">Phishing • Scam SMS • Malicious URL Detection</p>
             </div>
           </div>
-          <a className="btn-ghost" href="/docs" target="_blank" rel="noreferrer">
-            API Docs
-          </a>
+
+<a className="btn-ghost" href={docsHref} target="_blank" rel="noreferrer">
+  API Docs
+</a>
         </header>
 
         <div className="mt-6 grid grid-cols-12 gap-4">
