@@ -26,4 +26,4 @@ This repo includes a `render.yaml` Blueprint:
 Notes:
 - The frontend uses same-origin `/api/*` calls in production.
 - The Blueprint sets a rewrite rule to proxy `/api/*` to the backend.
-- If Render assigns a different backend URL than `https://scamshield-backend.onrender.com`, update the `destination` in `render.yaml`.
+- If Render assigns a different backend URL than `https://scamshield-backend-yb1y.onrender.com', update the `destination` in `render.yaml`.
